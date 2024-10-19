@@ -1,0 +1,29 @@
+{
+  "$id": "https://squadup-gaming.com/profile.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Profile",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "gamerTag": {
+      "type": "string"
+    },
+    "activisionId": {
+      "type": "string"
+    },
+    "kd": {
+      "type": "number"
+    },
+    "wins": {
+      "type": "integer"
+    },
+    "playStyle": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "integer"
+    }
+  }
+}

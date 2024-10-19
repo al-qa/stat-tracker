@@ -1,0 +1,5 @@
+{
+  "$id": "http://example.com/schemas/play-style.json",
+  "type": "string",
+  "enum" : ["SNIPER", "AGGRESSIVE", "CAUTIOUS", "ANCHOR", "CAMPER" ]
+}

@@ -1,0 +1,30 @@
+{
+  "$id": "https://squadup-gaming.com/user-create-request.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "User Create Request",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    }
+  },
+  "required": [ "firstName", "lastName", "displayName", "age", "gender", "email", "password" ]
+}

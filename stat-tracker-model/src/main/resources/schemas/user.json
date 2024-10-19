@@ -1,0 +1,29 @@
+{
+  "$id": "https://squadup-gaming.com/user.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "User",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}

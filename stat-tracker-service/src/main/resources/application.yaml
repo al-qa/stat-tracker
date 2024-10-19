@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: stat-tracker
+
+  datasource:
+    url: ${database_url}
+    username: ${database_username}
+    password: ${database_password}
+    driver-class-name: org.postgresql.Driver
