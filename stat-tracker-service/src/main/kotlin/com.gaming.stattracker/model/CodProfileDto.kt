@@ -3,7 +3,7 @@ package com.gaming.stattracker.model
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.gaming.stattracker.constants.PlayStyle
 
-class ProfileDto(
+class CodProfileDto(
     @JsonProperty("id") var id: Long? = null,
     @JsonProperty("gamerTag") var gamerTag: String? = null,
     @JsonProperty("activisionId") var activisionId: String? = null,

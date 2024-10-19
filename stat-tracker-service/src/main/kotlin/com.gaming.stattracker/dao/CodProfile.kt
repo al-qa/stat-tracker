@@ -9,7 +9,7 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.EnumType
 
 @Entity
-class Profile(
+class CodProfile(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) var id: Long?,
     var gamerTag: String,
     var activisionId: String,

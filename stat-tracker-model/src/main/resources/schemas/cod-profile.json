@@ -1,7 +1,7 @@
 {
-  "$id": "https://squadup-gaming.com/profile.json",
+  "$id": "https://squadup-gaming.com/cod-profile.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "Profile",
+  "description": "Call of Duty Profile",
   "type": "object",
   "properties": {
     "id": {

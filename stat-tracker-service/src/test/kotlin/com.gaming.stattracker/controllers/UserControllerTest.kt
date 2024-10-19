@@ -45,7 +45,7 @@ class UserControllerTest(@Autowired val mockMvc: MockMvc) {
 
     @Test
     fun `Email Linked to Existing Account`() {
-        val email = "karen@gmail.com"
+        val email = "jdoe@gmail.com"
         coEvery { service.create(any()) } throws SquadException("Email %s linked to existing user!".format(email))
 
         mockMvc.perform(MockMvcRequestBuilders.post("/users")
@@ -58,7 +58,7 @@ class UserControllerTest(@Autowired val mockMvc: MockMvc) {
 
     @Test
     fun `Username Already in Use` () {
-        val username = "karkilla"
+        val username = "jdoe"
         coEvery { service.create(any()) } throws SquadException("Username %s already in use!".format(username))
 
         mockMvc.perform(MockMvcRequestBuilders.post("/users")
@@ -72,12 +72,12 @@ class UserControllerTest(@Autowired val mockMvc: MockMvc) {
     private fun buildRequest(): String {
         return """ 
             {
-                "firstName": "Karen",
-                "lastName": "Jones",
-                "displayName": "karkilla",
+                "firstName": "John",
+                "lastName": "Doe",
+                "displayName": "jdoe",
                 "age": 31,
-                "gender": "female",
-                "email": "karen@gmail.com",
+                "gender": "male",
+                "email": "jdoe@gmail.com",
                 "password": "password"
             }
         """
@@ -86,12 +86,12 @@ class UserControllerTest(@Autowired val mockMvc: MockMvc) {
     private fun buildUserResponse(): JsonUser {
         val user = JsonUser()
         user.id = 1
-        user.firstName = "Karen"
-        user.lastName = "Jones"
-        user.displayName = "karkilla"
+        user.firstName = "John"
+        user.lastName = "Doe"
+        user.displayName = "jdoe"
         user.age = 31
-        user.gender = "female"
-        user.email = "karen@gmail.com"
+        user.gender = "male"
+        user.email = "jdoe@gmail.com"
 
         return user
     }

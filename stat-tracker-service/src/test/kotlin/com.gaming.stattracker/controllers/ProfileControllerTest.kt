@@ -1,8 +1,8 @@
 package com.gaming.stattracker.controllers
 
 import com.gaming.stattracker.exception.SquadException
-import com.gaming.stattracker.models.JsonProfile
-import com.gaming.stattracker.service.ProfileService
+import com.gaming.stattracker.models.JsonCodProfile
+import com.gaming.stattracker.service.CodProfileService
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.coEvery
 import org.junit.jupiter.api.Test
@@ -22,7 +22,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 class ProfileControllerTest(@Autowired val mockMvc: MockMvc) {
 
     @MockkBean
-    lateinit var service: ProfileService
+    lateinit var service: CodProfileService
 
     @Test
     fun `Create Profile`() {
@@ -101,8 +101,8 @@ class ProfileControllerTest(@Autowired val mockMvc: MockMvc) {
     private fun buildProfileRequest(): String {
         return """ 
             {
-                "gamerTag": "darknuts",
-                "activisionId": "darknuts#12345",
+                "gamerTag": "test_gamer",
+                "activisionId": "test_gamer#12345",
                 "kd": 1.05,
                 "wins": 105,
                 "playStyle": "CAUTIOUS",
@@ -111,11 +111,11 @@ class ProfileControllerTest(@Autowired val mockMvc: MockMvc) {
         """
     }
 
-    private fun buildProfileResponse(): JsonProfile {
-        val profile = JsonProfile()
+    private fun buildProfileResponse(): JsonCodProfile {
+        val profile = JsonCodProfile()
         profile.id = 1
-        profile.gamerTag = "darknuts"
-        profile.activisionId = "darknuts#12345"
+        profile.gamerTag = "test_gamer"
+        profile.activisionId = "test_gamer#12345"
         profile.kd = 1.05
         profile.wins = 105
         profile.playStyle = "CAUTIOUS"

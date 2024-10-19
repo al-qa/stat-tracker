@@ -1,7 +1,7 @@
 {
-  "$id": "https://squadup-gaming.com/profile-update-request.json",
+  "$id": "https://squadup-gaming.com/cod-profile-update-request.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "Profile Update Request",
+  "description": "Call of Duty Profile Update Request",
   "type": "object",
   "properties": {
     "gamerTag": {
@@ -17,7 +17,7 @@
       "type": "integer"
     },
     "playStyle": {
-      "$ref": "play-style.json"
+      "$ref": "cod-play-style.json"
     },
     "userId": {
       "type": "integer"
