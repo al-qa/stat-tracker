@@ -12,6 +12,8 @@ import org.springframework.security.web.SecurityFilterChain
 @EnableWebSecurity
 class SecurityConfig() {
 
+    // TODO: Implement OAuth (possibly Auth0)
+
     @Bean
     fun filterChain(http: HttpSecurity): SecurityFilterChain {
         return http.csrf {
