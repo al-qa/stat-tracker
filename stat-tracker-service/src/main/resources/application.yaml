@@ -3,7 +3,21 @@ spring:
     name: stat-tracker
 
   datasource:
-    url: ${database_url}
-    username: ${database_username}
-    password: ${database_password}
-    driver-class-name: org.postgresql.Driver
+    url: ${db_url}
+    username: ${db_username}
+    password: ${db_password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+  flyway:
+    baseline-on-migrate: true
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  servlet:
+    context-path: /stat-tracker

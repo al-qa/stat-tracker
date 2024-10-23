@@ -1,0 +1,19 @@
+CREATE TABLE gamer (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    display_name VARCHAR(255) NOT NULL,
+    age INTEGER NOT NULL,
+    gender VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE cod_profile (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    gamer_tag VARCHAR(255) NOT NULL,
+    kd VARCHAR(255) NOT NULL,
+    wins VARCHAR(255) NOT NULL,
+    play_style VARCHAR(255) NOT NULL,
+    user_id BIGINT NOT NULL
+);

@@ -4,3 +4,6 @@
 ### Added
  - Initial implementation.
 
+### Changed
+ - Use Flyway for table generation instead of hibernate.
+
